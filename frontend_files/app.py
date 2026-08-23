@@ -37,9 +37,8 @@ product_data = {
     'Product_Type': product_type
 }
 
-# !!! IMPORTANT: Replace <user_name>-<space_name> with your actual Hugging Face Space URL details !!!
-# For example: https://your-username-your-space-name.hf.space
-backend_url_online = "https://<user_name>-<space_name>.hf.space/v1/predict" # Ensure this points to your Flask backend URL
+# backend url
+backend_url_online = "https://backend:7860/v1/predict" # Ensure this points to your Flask backend URL
 
 if st.button("Predict Sales", type='primary'):
     try:
@@ -63,8 +62,8 @@ st.subheader("Batch Sales Prediction")
 
 file = st.file_uploader("Upload a CSV file for batch prediction", type=["csv"])
 
-# !!! IMPORTANT: Replace <user_name>-<space_name> with your actual Hugging Face Space URL details !!!
-backend_url_batch = "https://<user_name>-<space_name>.hf.space/v1/predictbatch" # Ensure this points to your Flask backend URL
+
+backend_url_batch = "https://backend:7860/v1/predictbatch" # Ensure this points to your Flask backend URL
 
 if file is not None:
     if st.button("Predict Sales for Batch", type='secondary'):

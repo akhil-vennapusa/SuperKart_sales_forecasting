@@ -118,4 +118,4 @@ def predict_sales_batch():
 if __name__ == '__main__':
     # host='0.0.0.0' allows access from outside the container (e.g., from Codespaces port forwarding)
     # port=5000 is a common default for Flask, can be changed if needed
-    sales_forecasting_api.run(debug=True, host='0.0.0.0', port=5000)
+    sales_forecasting_api.run(debug=True)
